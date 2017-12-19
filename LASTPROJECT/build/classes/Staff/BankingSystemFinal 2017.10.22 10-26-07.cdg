@@ -1,0 +1,347 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ClassDiagram name="BankingSystemFinal">
+  <ClassDiagramComponents>
+    <Class name="AccountInfo" package="bankingsystemfinal" visibility="public" xPosition="20.0" yPosition="20.0">
+      <Fields>
+        <Field name="input" type="Scanner" visibility="package"/>
+        <Field name="Fname" type="String" visibility="private"/>
+        <Field name="Lname" type="String" visibility="private"/>
+        <Field name="Email" type="String" visibility="private"/>
+        <Field name="Password" type="String" visibility="private"/>
+        <Field name="Key" type="int" visibility="private"/>
+        <Field name="SecurityQuestion" type="String" visibility="private"/>
+        <Field name="MobileNumber" type="int" visibility="private"/>
+        <Field name="Gender" type="String" visibility="private"/>
+        <Field name="Age" type="int" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public"/>
+      </Constructors>
+      <Methods>
+        <Method name="Gender" returnType="String" visibility="public">
+          <Argument type="String" name="Choice"/>
+        </Method>
+        <Method name="UniqueKeyGeneration" returnType="void" visibility="public"/>
+        <Method name="Login" returnType="void" visibility="public">
+          <Argument type="String" name="Email"/>
+          <Argument type="String" name="Password"/>
+        </Method>
+        <Method name="SignUp" returnType="void" visibility="public">
+          <Argument type="AccountInfo" name="x"/>
+        </Method>
+        <Method name="getFname" returnType="String" visibility="public"/>
+        <Method name="setFname" returnType="void" visibility="public">
+          <Argument type="String" name="Fname"/>
+        </Method>
+        <Method name="getLname" returnType="String" visibility="public"/>
+        <Method name="setLname" returnType="void" visibility="public">
+          <Argument type="String" name="Lname"/>
+        </Method>
+        <Method name="getEmail" returnType="String" visibility="public"/>
+        <Method name="setEmail" returnType="void" visibility="public">
+          <Argument type="String" name="Email"/>
+        </Method>
+        <Method name="getPassword" returnType="String" visibility="public"/>
+        <Method name="setPassword" returnType="void" visibility="public">
+          <Argument type="String" name="Password"/>
+        </Method>
+        <Method name="getKey" returnType="int" visibility="public"/>
+        <Method name="setKey" returnType="void" visibility="public">
+          <Argument type="int" name="Key"/>
+        </Method>
+        <Method name="getSecurityQuestion" returnType="String" visibility="public"/>
+        <Method name="setSecurityQuestion" returnType="void" visibility="public">
+          <Argument type="String" name="SecurityQuestion"/>
+        </Method>
+        <Method name="getMobileNumber" returnType="int" visibility="public"/>
+        <Method name="setMobileNumber" returnType="void" visibility="public">
+          <Argument type="int" name="MobileNumber"/>
+        </Method>
+        <Method name="getGender" returnType="String" visibility="public"/>
+        <Method name="setGender" returnType="void" visibility="public">
+          <Argument type="String" name="Gender"/>
+        </Method>
+        <Method name="getAge" returnType="int" visibility="public"/>
+        <Method name="setAge" returnType="void" visibility="public">
+          <Argument type="int" name="Age"/>
+        </Method>
+        <Method name="ModifyUserAccount" returnType="void" visibility="public"/>
+        <Method name="Add" returnType="void" visibility="public"/>
+        <Method name="ForgetPassword" returnType="void" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="AccountTypes" package="bankingsystemfinal" visibility="public" xPosition="320.0" yPosition="20.0">
+      <Fields/>
+      <Constructors>
+        <Constructor visibility="public"/>
+      </Constructors>
+      <Methods>
+        <Method name="Saving" returnType="void" visibility="public"/>
+        <Method name="Company" returnType="void" visibility="public"/>
+        <Method name="TimeDeposit" returnType="void" visibility="public"/>
+        <Method name="YouthAccount" returnType="void" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="BankingSystemFinal" package="bankingsystemfinal" visibility="public" xPosition="620.0" yPosition="20.0">
+      <Fields/>
+      <Constructors/>
+      <Methods>
+        <Method name="main" returnType="void" visibility="public" isStatic="true">
+          <Argument type="String[]" name="args"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="CreditCardLevels" package="bankingsystemfinal" visibility="public" xPosition="920.0" yPosition="20.0">
+      <Fields>
+        <Field name="ClassicCard" type="String" visibility="private"/>
+        <Field name="SilverCard" type="String" visibility="private"/>
+        <Field name="GoldenCard" type="String" visibility="private"/>
+        <Field name="TitaniumCard" type="String" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public"/>
+      </Constructors>
+      <Methods/>
+    </Class>
+    <Class name="Customer" package="bankingsystemfinal" visibility="public" xPosition="1220.0" yPosition="20.0">
+      <Fields>
+        <Field name="Balance" type="int" visibility="private"/>
+        <Field name="No" type="int" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public"/>
+      </Constructors>
+      <Methods>
+        <Method name="BankAccount" returnType="void" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="CustomerServiceAgent" package="bankingsystemfinal" visibility="public" xPosition="1520.0" yPosition="20.0">
+      <Fields/>
+      <Constructors/>
+      <Methods>
+        <Method name="AddNewAccount" returnType="void" visibility="public"/>
+        <Method name="RemoveAccount" returnType="void" visibility="public"/>
+        <Method name="SellCreditCard" returnType="void" visibility="public"/>
+        <Method name="SellDebitCard" returnType="void" visibility="public"/>
+        <Method name="DeleteUserAccount" returnType="void" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="Display" package="bankingsystemfinal" visibility="public" xPosition="1820.0" yPosition="20.0">
+      <Fields/>
+      <Constructors>
+        <Constructor visibility="public"/>
+      </Constructors>
+      <Methods>
+        <Method name="ShowBalance" returnType="void" visibility="public"/>
+        <Method name="ShowTransactions" returnType="void" visibility="public"/>
+        <Method name="Menu" returnType="void" visibility="public"/>
+        <Method name="UserChoice" returnType="void" visibility="public"/>
+        <Method name="output" returnType="void" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="Hr" package="bankingsystemfinal" visibility="public" xPosition="2120.0" yPosition="20.0">
+      <Fields>
+        <Field name="Questions" type="String" visibility="private"/>
+        <Field name="Answers" type="String" visibility="private"/>
+      </Fields>
+      <Constructors/>
+      <Methods>
+        <Method name="PutSalary" returnType="void" visibility="public"/>
+      </Methods>
+    </Class>
+    <Interface name="IAccounntInfo" package="bankingsystemfinal" visibility="public" xPosition="20.0" yPosition="420.0">
+      <Methods>
+        <Method name="Gender" returnType="String" visibility="public"/>
+        <Method name="Login" returnType="void" visibility="public"/>
+        <Method name="SignUp" returnType="void" visibility="public"/>
+        <Method name="ModifyUserAccount" returnType="void" visibility="public"/>
+        <Method name="Add" returnType="void" visibility="public"/>
+        <Method name="ForgetPassword" returnType="void" visibility="public"/>
+      </Methods>
+    </Interface>
+    <Interface name="ICustomer" package="bankingsystemfinal" visibility="public" xPosition="320.0" yPosition="420.0">
+      <Methods>
+        <Method name="BankAccount" returnType="void" visibility="public"/>
+      </Methods>
+    </Interface>
+    <Interface name="ICustomerServiceAgent" package="bankingsystemfinal" visibility="public" xPosition="620.0" yPosition="420.0">
+      <Methods>
+        <Method name="AddNewAccount" returnType="void" visibility="public"/>
+        <Method name="RemoveAccount" returnType="void" visibility="public"/>
+        <Method name="SellCreditCard" returnType="void" visibility="public"/>
+        <Method name="SellDebitCard" returnType="void" visibility="public"/>
+      </Methods>
+    </Interface>
+    <Interface name="IDisplay" package="bankingsystemfinal" visibility="public" xPosition="920.0" yPosition="420.0">
+      <Methods>
+        <Method name="output" returnType="void" visibility="public">
+          <Argument type="String" name="Email"/>
+          <Argument type="String" name="Password"/>
+        </Method>
+        <Method name="ShowBalance" returnType="void" visibility="public"/>
+        <Method name="ShowTransactions" returnType="void" visibility="public"/>
+        <Method name="Menu" returnType="void" visibility="public"/>
+        <Method name="UserChoice" returnType="void" visibility="public"/>
+      </Methods>
+    </Interface>
+    <Interface name="IHr" package="bankingsystemfinal" visibility="public" xPosition="1220.0" yPosition="420.0">
+      <Methods>
+        <Method name="PutSalary" returnType="void" visibility="public"/>
+      </Methods>
+    </Interface>
+    <Interface name="ILoansOfficer" package="bankingsystemfinal" visibility="public" xPosition="1520.0" yPosition="420.0">
+      <Methods>
+        <Method name="ApproveLoans" returnType="void" visibility="public"/>
+        <Method name="AnalyzeApplicants" returnType="void" visibility="public"/>
+      </Methods>
+    </Interface>
+    <Interface name="IManager" package="bankingsystemfinal" visibility="public" xPosition="1820.0" yPosition="420.0">
+      <Methods>
+        <Method name="approveTransaction" returnType="boolean" visibility="public"/>
+        <Method name="DeleteEmployee" returnType="void" visibility="public"/>
+      </Methods>
+    </Interface>
+    <Interface name="IReport" package="bankingsystemfinal" visibility="public" xPosition="2120.0" yPosition="420.0">
+      <Methods>
+        <Method name="GenderReport" returnType="void" visibility="public"/>
+        <Method name="ProductsReport" returnType="void" visibility="public"/>
+        <Method name="TransactionsReport" returnType="void" visibility="public"/>
+        <Method name="LoansReport" returnType="void" visibility="public"/>
+        <Method name="EmployeeReport" returnType="void" visibility="public"/>
+      </Methods>
+    </Interface>
+    <Interface name="ISmartWallet" package="bankingsystemfinal" visibility="public" xPosition="20.0" yPosition="820.0">
+      <Methods>
+        <Method name="Fawry" returnType="void" visibility="public"/>
+        <Method name="GoBus" returnType="void" visibility="public"/>
+        <Method name="VodafoneCredit" returnType="void" visibility="public"/>
+        <Method name="OrangeCredit" returnType="void" visibility="public"/>
+        <Method name="EtisalatCredit" returnType="void" visibility="public"/>
+        <Method name="TicketMarche" returnType="void" visibility="public"/>
+      </Methods>
+    </Interface>
+    <Interface name="IStaff" package="bankingsystemfinal" visibility="public" xPosition="320.0" yPosition="820.0">
+      <Methods>
+        <Method name="CheckIn" returnType="void" visibility="public"/>
+      </Methods>
+    </Interface>
+    <Interface name="ITeller" package="bankingsystemfinal" visibility="public" xPosition="620.0" yPosition="820.0">
+      <Methods>
+        <Method name="Deposit" returnType="void" visibility="public"/>
+        <Method name="Withdraw" returnType="void" visibility="public"/>
+      </Methods>
+    </Interface>
+    <Class name="LoansOfficer" package="bankingsystemfinal" visibility="public" xPosition="920.0" yPosition="820.0">
+      <Fields/>
+      <Constructors/>
+      <Methods>
+        <Method name="ApproveLoans" returnType="void" visibility="public"/>
+        <Method name="AnalyzeApplicants" returnType="void" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="LoansTypes" package="bankingsystemfinal" visibility="public" xPosition="1220.0" yPosition="820.0">
+      <Fields>
+        <Field name="amount" type="int" visibility="private"/>
+      </Fields>
+      <Constructors/>
+      <Methods>
+        <Method name="ConformingLoans" returnType="void" visibility="public"/>
+        <Method name="ConventionalLoans" returnType="void" visibility="public"/>
+        <Method name="CustomLoan" returnType="int" visibility="public">
+          <Argument type="int" name="amount"/>
+        </Method>
+        <Method name="AutoLoans" returnType="void" visibility="public"/>
+        <Method name="SmallBuissinessLoans" returnType="void" visibility="public"/>
+        <Method name="MortgageLoans" returnType="void" visibility="public"/>
+        <Method name="WeddingFinanceLoan" returnType="void" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="Manager" package="bankingsystemfinal" visibility="public" xPosition="1520.0" yPosition="820.0">
+      <Fields/>
+      <Constructors/>
+      <Methods>
+        <Method name="approveTransactions" returnType="boolean" visibility="public"/>
+        <Method name="DeleteEmployee" returnType="void" visibility="public"/>
+        <Method name="approveTransaction" returnType="boolean" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="Reports" package="bankingsystemfinal" visibility="public" xPosition="1820.0" yPosition="820.0">
+      <Fields/>
+      <Constructors/>
+      <Methods>
+        <Method name="GenderReport" returnType="void" visibility="public"/>
+        <Method name="TransactionsReport" returnType="void" visibility="public"/>
+        <Method name="ProductsReport" returnType="void" visibility="public"/>
+        <Method name="LoansReport" returnType="void" visibility="public"/>
+        <Method name="EmployeeReport" returnType="void" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="ScoreSheet" package="bankingsystemfinal" visibility="public" xPosition="2120.0" yPosition="820.0">
+      <Fields>
+        <Field name="Points" type="int" visibility="private"/>
+      </Fields>
+      <Constructors/>
+      <Methods>
+        <Method name="calculatePoints" returnType="void" visibility="public"/>
+        <Method name="SetPoints" returnType="void" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="SmartWallet" package="bankingsystemfinal" visibility="public" xPosition="20.0" yPosition="1220.0">
+      <Fields>
+        <Field name="buy" type="Object" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public"/>
+      </Constructors>
+      <Methods>
+        <Method name="Fawry" returnType="void" visibility="public"/>
+        <Method name="GoBus" returnType="void" visibility="public"/>
+        <Method name="VodafoneCredit" returnType="void" visibility="public"/>
+        <Method name="OrangeCredit" returnType="void" visibility="public"/>
+        <Method name="EtisalatCredit" returnType="void" visibility="public"/>
+        <Method name="TicketMarche" returnType="void" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="Staff" package="bankingsystemfinal" visibility="public" xPosition="320.0" yPosition="1220.0">
+      <Fields>
+        <Field name="Salary" type="int" visibility="private"/>
+        <Field name="Id" type="int" visibility="private"/>
+      </Fields>
+      <Constructors/>
+      <Methods>
+        <Method name="CheckIn" returnType="void" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="Teller" package="bankingsystemfinal" visibility="public" xPosition="620.0" yPosition="1220.0">
+      <Fields>
+        <Field name="EmployeeField" type="String" visibility="private"/>
+      </Fields>
+      <Constructors/>
+      <Methods>
+        <Method name="Deposit" returnType="void" visibility="public"/>
+        <Method name="Withdraw" returnType="void" visibility="public"/>
+      </Methods>
+    </Class>
+  </ClassDiagramComponents>
+  <ClassDiagramRelations>
+    <ImplementsRelation name="&lt;&lt;implements&gt;&gt;" source="bankingsystemfinal.SmartWallet" target="bankingsystemfinal.ISmartWallet"/>
+    <ImplementsRelation name="&lt;&lt;implements&gt;&gt;" source="bankingsystemfinal.Display" target="bankingsystemfinal.IDisplay"/>
+    <ImplementsRelation name="&lt;&lt;implements&gt;&gt;" source="bankingsystemfinal.Customer" target="bankingsystemfinal.ICustomer"/>
+    <IsRelation name="is" source="bankingsystemfinal.Hr" target="bankingsystemfinal.Staff"/>
+    <UseRelation source="bankingsystemfinal.AccountInfo" target="bankingsystemfinal.AccountInfo" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <IsRelation name="is" source="bankingsystemfinal.Manager" target="bankingsystemfinal.Staff"/>
+    <IsRelation name="is" source="bankingsystemfinal.Teller" target="bankingsystemfinal.Staff"/>
+    <ImplementsRelation name="&lt;&lt;implements&gt;&gt;" source="bankingsystemfinal.Reports" target="bankingsystemfinal.IReport"/>
+    <IsRelation name="is" source="bankingsystemfinal.LoansOfficer" target="bankingsystemfinal.Staff"/>
+    <ImplementsRelation name="&lt;&lt;implements&gt;&gt;" source="bankingsystemfinal.Manager" target="bankingsystemfinal.IManager"/>
+    <ImplementsRelation name="&lt;&lt;implements&gt;&gt;" source="bankingsystemfinal.Staff" target="bankingsystemfinal.IStaff"/>
+    <ImplementsRelation name="&lt;&lt;implements&gt;&gt;" source="bankingsystemfinal.CustomerServiceAgent" target="bankingsystemfinal.ICustomerServiceAgent"/>
+    <IsRelation name="is" source="bankingsystemfinal.Customer" target="bankingsystemfinal.AccountInfo"/>
+    <ImplementsRelation name="&lt;&lt;implements&gt;&gt;" source="bankingsystemfinal.Teller" target="bankingsystemfinal.ITeller"/>
+    <ImplementsRelation name="&lt;&lt;implements&gt;&gt;" source="bankingsystemfinal.Hr" target="bankingsystemfinal.IHr"/>
+    <IsRelation name="is" source="bankingsystemfinal.Staff" target="bankingsystemfinal.AccountInfo"/>
+    <ImplementsRelation name="&lt;&lt;implements&gt;&gt;" source="bankingsystemfinal.LoansOfficer" target="bankingsystemfinal.ILoansOfficer"/>
+    <IsRelation name="is" source="bankingsystemfinal.CustomerServiceAgent" target="bankingsystemfinal.Staff"/>
+  </ClassDiagramRelations>
+</ClassDiagram>
