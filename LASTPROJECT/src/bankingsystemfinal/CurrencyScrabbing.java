@@ -29,7 +29,7 @@ public class CurrencyScrabbing extends JFrame
     public CurrencyScrabbing()  throws IOException
             
     {       
-        
+        setResizable(false);
         setTitle("Currency Today");
         setSize(500,500);
         setLayout(new FlowLayout());
@@ -45,7 +45,7 @@ public class CurrencyScrabbing extends JFrame
             Scrabbinglist.add(title);
         }  }catch(Exception e)
         {
-            System.out.println("error in site ");
+            JOptionPane.showMessageDialog(null , "No internet connection  ");
         }
         
     

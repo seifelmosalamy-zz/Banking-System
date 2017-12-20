@@ -187,7 +187,7 @@ public class SignUpForm extends JFrame
         jComboBox1.addItem("Manager");
         jComboBox1.addItem("LoanOfficer");
         jComboBox1.addItem("Customer");
-        jComboBox1.setBounds(20,300,130,30);
+        jComboBox1.setBounds(20,300,150,30);
         comboCustomer.addItem("EGP Account");
         comboCustomer.addItem("Dollar Account");
        
@@ -221,7 +221,7 @@ public class SignUpForm extends JFrame
         jLabel5.setBounds(10,280,100,30);
         jLabel14.setBounds(10,390,100,30);
         jLabel15.setBounds(10,420,100,30);//valid phone number
-        SoraIcon.setBounds(250,250,250 ,250);
+        SoraIcon.setBounds(70,85,250 ,250);
         
         SaveButton.setBounds(20,400,100,30);
         ReadButton.setBounds(130, 400,130,30);

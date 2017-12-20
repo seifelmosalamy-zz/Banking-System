@@ -87,7 +87,7 @@ public class BankingSystemFinal implements Serializable {
         CustomerForm cf2 =new CustomerForm();
         SignUpForm suf = new SignUpForm();
         suf.setVisible(true);
-        //CurrencyScrabbing cs = new CurrencyScrabbing();
+        CurrencyScrabbing cs = new CurrencyScrabbing();
         Sound sound = new Sound();
         
         //Making server Listining
