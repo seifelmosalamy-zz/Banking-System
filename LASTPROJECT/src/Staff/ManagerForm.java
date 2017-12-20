@@ -162,8 +162,14 @@ public class ManagerForm extends JFrame implements Serializable{
            }
            if(buttonpressed.equals(jButton2)){
            choosen4.remove(count);
+           try {           
+            ObjectOutputStream write1= new ObjectOutputStream(new FileOutputStream(type+".txt"));
+            write1.writeObject(choosen4);
+            write1.close();      
+              } catch (IOException ex) {
+              JOptionPane.showMessageDialog(null, "Error in save");}
+                }
            
-           }
            if(buttonpressed.equals(jButton3)){           
 //               try {
 //                   

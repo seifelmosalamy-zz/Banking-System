@@ -2,6 +2,7 @@ package Staff;
 
 import bankingsystemfinal.AccountInfo;
 import static bankingsystemfinal.BankingSystemFinal.CustomerAgentList;
+import static bankingsystemfinal.BankingSystemFinal.CustomerList;
 import static bankingsystemfinal.BankingSystemFinal.LoanOfficer;
 import static bankingsystemfinal.BankingSystemFinal.Manager;
 import static bankingsystemfinal.BankingSystemFinal.Teller;
@@ -9,6 +10,9 @@ import bankingsystemfinal.SignUpForm;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.io.FileOutputStream;
+import java.io.IOException;
+import java.io.ObjectOutputStream;
 import java.io.Serializable;
 import java.util.ArrayList;
 import javax.swing.*;
@@ -136,6 +140,12 @@ String type;
                 if (searchitem4.getUserName().equals(EUN)){
                    int q=Integer.parseInt(jTextField3.getText()); 
                     searchitem4.setSalary(q);
+                    try {           
+            ObjectOutputStream write2= new ObjectOutputStream(new FileOutputStream(type+".txt"));
+            write2.writeObject(choosen5);
+            write2.close();      
+              } catch (IOException ex) {
+              JOptionPane.showMessageDialog(null, "Error in save");}
                 }
                 else {
                JOptionPane.showMessageDialog(null, "Not Found");

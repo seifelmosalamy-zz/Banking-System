@@ -2,23 +2,6 @@
 <project-private xmlns="http://www.netbeans.org/ns/project-private/1">
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
-        <group>
-            <file>file:/Volumes/My%20Mac/MyPrograms/THELAST/THELAST/src/bankingsystemfinal/AccountTypes.java</file>
-            <file>file:/Volumes/My%20Mac/MyPrograms/THELAST/THELAST/src/Staff/CustomerServiceAgentForm.java</file>
-            <file>file:/Volumes/My%20Mac/MyPrograms/THELAST/THELAST/src/Staff/TellerForm.java</file>
-            <file>file:/Volumes/My%20Mac/MyPrograms/THELAST/THELAST/src/Staff/CustomerServiceAgent.java</file>
-            <file>file:/Volumes/My%20Mac/MyPrograms/THELAST/THELAST/src/bankingsystemfinal/AccountInfo.java</file>
-            <file>file:/Volumes/My%20Mac/MyPrograms/THELAST/THELAST/src/bankingsystemfinal/GraphicsClass.java</file>
-            <file>file:/Volumes/My%20Mac/MyPrograms/THELAST/THELAST/src/bankingsystemfinal/LoginForm.java</file>
-            <file>file:/Volumes/My%20Mac/MyPrograms/THELAST/THELAST/src/bankingsystemfinal/LoansApplicationForm.java</file>
-            <file>file:/Volumes/My%20Mac/MyPrograms/THELAST/THELAST/src/bankingsystemfinal/BankingSystemFinal.java</file>
-            <file>file:/Volumes/My%20Mac/MyPrograms/THELAST/THELAST/src/Exceptions/SignUpException.java</file>
-            <file>file:/Volumes/My%20Mac/MyPrograms/THELAST/THELAST/src/bankingsystemfinal/FrameForPaint.java</file>
-            <file>file:/Volumes/My%20Mac/MyPrograms/THELAST/THELAST/src/bankingsystemfinal/CurrencyScrabbing.java</file>
-            <file>file:/Volumes/My%20Mac/MyPrograms/THELAST/THELAST/src/bankingsystemfinal/LoansTypes.java</file>
-            <file>file:/Volumes/My%20Mac/MyPrograms/THELAST/THELAST/src/Exceptions/AgeException.java</file>
-            <file>file:/Volumes/My%20Mac/MyPrograms/THELAST/THELAST/src/bankingsystemfinal/Reports.java</file>
-            <file>file:/Volumes/My%20Mac/MyPrograms/THELAST/THELAST/src/bankingsystemfinal/SignUpForm.java</file>
-        </group>
+        <group/>
     </open-files>
 </project-private>

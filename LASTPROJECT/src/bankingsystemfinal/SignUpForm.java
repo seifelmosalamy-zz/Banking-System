@@ -230,6 +230,8 @@ public class SignUpForm extends JFrame
         jRadioButton1.setBounds(350,300,100,30);
         jRadioButton1.setForeground(Color.white);
         jRadioButton2.setForeground(Color.white);
+        jRadioButton1.setBackground(new Color(36, 45, 67));
+        jRadioButton2.setBackground(new Color(36, 45, 67));
         jRadioButton2.setBounds(350,350,100,30);
         jRadioButton1.setText("Male");
         jRadioButton2.setText("Female");
