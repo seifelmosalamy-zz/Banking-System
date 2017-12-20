@@ -83,6 +83,7 @@ public class BankingSystemFinal implements Serializable {
         LoginForm loginf = new LoginForm();
         loginf.setVisible(true);
         TransactionsForm tf = new TransactionsForm();
+        tf.setVisible(true);
         CustomerForm cf2 =new CustomerForm();
         SignUpForm suf = new SignUpForm();
         suf.setVisible(true);

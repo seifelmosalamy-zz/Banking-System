@@ -216,6 +216,12 @@ jLabel2.setText("Enter the amount: ");
 
 }
 public void CloseFrame(){
+     try {           
+            ObjectOutputStream write= new ObjectOutputStream(new FileOutputStream("Customer.txt"));
+            write.writeObject(CustomerList);
+            write.close();      
+              } catch (IOException ex) {
+              JOptionPane.showMessageDialog(null, "Error in save");}
     super.dispose();
 }
 

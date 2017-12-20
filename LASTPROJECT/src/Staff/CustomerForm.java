@@ -291,9 +291,9 @@ public class CustomerForm extends JFrame implements Serializable{
                       try {
                           
             a =null;
-            ObjectOutputStream ob= new ObjectOutputStream(new FileOutputStream("Customer"+".txt"));
-            ob.writeObject(CustomerList);
-            ob.close();      
+            ObjectOutputStream ob2= new ObjectOutputStream(new FileOutputStream("Customer"+".txt"));
+            ob2.writeObject(CustomerList);
+            ob2.close();      
               } catch (IOException ex) {
               JOptionPane.showMessageDialog(null, "Error in save");}
         
