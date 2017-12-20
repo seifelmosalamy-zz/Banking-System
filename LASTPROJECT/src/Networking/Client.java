@@ -43,7 +43,7 @@ public class Client extends JFrame{
     {
         this.clientName=Name;
         setSize(300,600);
-        setTitle("Client V 1.0" + Name);
+        setTitle("Teller" + Name);
         recivedMsg=new JLabel("<html>Recived Message<br>");
         setLayout(null);
         recivedMsg.setBounds(20,20, 200,250);

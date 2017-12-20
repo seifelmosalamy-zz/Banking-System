@@ -6,6 +6,7 @@
 package Staff;
 
 
+import Networking.Client;
 import bankingsystemfinal.AccountInfo;
 import static bankingsystemfinal.BankingSystemFinal.CustomerAgentList;
 import static bankingsystemfinal.BankingSystemFinal.CustomerList;
@@ -17,6 +18,7 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
+import java.io.IOException;
 import java.io.ObjectOutputStream;
 import java.io.Serializable;
 import java.util.ArrayList;
@@ -30,11 +32,12 @@ import javax.swing.text.StyleConstants;
  */
 public class ManagerForm extends JFrame implements Serializable{
     
-     public ManagerForm() {
+     public ManagerForm() throws IOException {
           setSize(800,400);
        setTitle("Manager");
         setLayout(null);
         initComponents();
+        
     }
      private ButtonGroup buttonGroup1;
     private JButton jButton1;
