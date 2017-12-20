@@ -62,7 +62,7 @@ public class GraphicsClass extends JPanel
      //Azbot counter el male bs 
 
             g.setColor(Color.cyan);
-            System.out.println(ctrm);
+            
                 
             //Statistics for males in loans application form
             g.fillRect(100 , (500 - (ctrm + 50)) /* da el minus*/ , 60, 1000 /*da yekbar fashkh */);

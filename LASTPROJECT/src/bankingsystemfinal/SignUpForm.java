@@ -90,7 +90,7 @@ public class SignUpForm extends JFrame
 
         setLayout(null);
         panel.setBounds(500, 0, 500, 500);
-        panel.setLayout(new FlowLayout());
+        panel.setLayout(null);
         panel.setBackground(new Color(36, 45, 67));
         add(panel);
            //JFrame Properties
@@ -162,44 +162,55 @@ public class SignUpForm extends JFrame
          UserNameTextField.addMouseListener(new MouseListner());
           
 //Setting Bounds 
+        //Setting Bounds 
         jComboBox1.addItem("CustomerAgent");
         jComboBox1.addItem("Teller");
         jComboBox1.addItem("Manager");
         jComboBox1.addItem("LoanOfficer");
         jComboBox1.addItem("Customer");
-        jComboBox1.setBounds(textfieldbounds);
+        jComboBox1.setBounds(20,300,130,30);
         comboCustomer.addItem("EGP Account");
         comboCustomer.addItem("Dollar Account");
-        jPasswordField1.setBounds(textfieldbounds);
-        UserNameLabel.setBounds(labelbounds);
-        jButton1.setBounds(labelbounds);
-        jTextField1.setBounds(textfieldbounds);
-        jTextField2.setBounds(textfieldbounds);
-        jTextField3.setBounds(textfieldbounds);
-        jTextField5.setBounds(textfieldbounds);
-        jTextField6.setBounds(textfieldbounds);
-        jTextField7.setBounds(textfieldbounds);     
-        jLabel1.setBounds(BankingSystemFinal.labelbounds);
-        jLabel2.setBounds(labelbounds);
-        jLabel3.setBounds(labelbounds);
-        jLabel4.setBounds(labelbounds);
-        jLabel5.setBounds(labelbounds);
-        jLabel6.setBounds(labelbounds);
-        jLabel7.setBounds(labelbounds);
-        jLabel8.setBounds(labelbounds);
-        jLabel9.setBounds(labelbounds);
-        jLabel10.setBounds(labelbounds);
-        Jlabelname.setBounds(labelbounds);
-        SaveButton.setBounds(labelbounds);
-        ReadButton.setBounds(labelbounds);;
-        jLabel3.setBounds(labelbounds);
-        jLabel14.setBounds(labelbounds);
-        jLabel15.setBounds(labelbounds);
-        btnCustomer.setBounds(labelbounds);
-        UserNameTextField.setBounds(textfieldbounds);
-        PasswordLabel.setBounds(labelbounds);
-        jRadioButton1.setBounds(labelbounds);
-        jRadioButton2.setBounds(labelbounds);
+       
+        
+        
+        
+        jTextField1.setBounds(110,0,100,30);
+        jTextField2.setBounds(110,40,100,30);
+        jTextField3.setBounds(110,80,100,30);
+        jTextField5.setBounds(110,120,100,30);
+        jTextField6.setBounds(110,160,100,30);
+        jTextField7.setBounds(110,150,100,30);     
+        UserNameTextField.setBounds(110,200,100,30);
+        jPasswordField1.setBounds(110,240,100,30);
+        
+        
+        jLabel1.setBounds(10,0,100,30);
+        jLabel2.setBounds(10,40,100,30);
+        jLabel3.setBounds(10,80,100,30);   
+        jLabel4.setBounds(10,120,100,30);
+        PasswordLabel.setBounds(10,240,100,30);
+        jLabel6.setBounds(10,160,100,30);
+        jLabel7.setBounds(10,210,100,30);
+        UserNameLabel.setBounds(10,200,100,30);
+        //eh dol!!
+        jLabel8.setBounds(10,240,100,30);
+        jLabel9.setBounds(10,270,100,30);
+        jLabel10.setBounds(10,300,100,30);//valid age
+        Jlabelname.setBounds(10,330,100,30);//valid first name
+        jLabel5.setBounds(10,280,100,30);
+        jLabel14.setBounds(10,390,100,30);
+        jLabel15.setBounds(10,420,100,30);//valid phone number
+        
+        
+        SaveButton.setBounds(20,400,100,30);
+        ReadButton.setBounds(130, 400,130,30);
+        btnCustomer.setBounds(280,400,180,30);
+        jButton1.setBounds(180,300,100,30);
+        jRadioButton1.setBounds(350,300,100,30);
+        jRadioButton1.setForeground(Color.white);
+        jRadioButton2.setForeground(Color.white);
+        jRadioButton2.setBounds(350,350,100,30);
         jRadioButton1.setText("Male");
         jRadioButton2.setText("Female");
        

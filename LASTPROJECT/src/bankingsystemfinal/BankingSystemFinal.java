@@ -88,7 +88,18 @@ public class BankingSystemFinal implements Serializable {
         //CurrencyScrabbing cs = new CurrencyScrabbing();
         Sound sound = new Sound();
         
+        //Making server Listining
+        /* Server s=new Server();
+        s.setVisible(true);
+        s.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        Thread t=new Thread(s);
+        t.start();*/
         
+        
+        //Networking 
+        /*  Client cl=new Client("Ahmed");
+        cl.setVisible(true);
+        cl.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);*/
       
         //sound.play();
         
