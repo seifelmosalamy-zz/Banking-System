@@ -29,7 +29,7 @@ public class CurrencyScrabbing extends JFrame
     public CurrencyScrabbing()  throws IOException
             
     {       
-        setResizable(false);
+        
         setTitle("Currency Today");
         setSize(500,500);
         setLayout(new FlowLayout());

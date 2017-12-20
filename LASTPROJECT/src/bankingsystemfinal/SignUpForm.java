@@ -22,6 +22,8 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
+import java.awt.image.BufferedImage;
+import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileOutputStream;
 import java.io.IOException;
@@ -33,6 +35,7 @@ import java.util.ArrayList;
 
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
+import javax.imageio.ImageIO;
 import javax.swing.*;
 
 
@@ -75,6 +78,8 @@ public class SignUpForm extends JFrame
     private JRadioButton jRadioButton2;
     private ButtonGroup buttongp1;
     private JButton btnCustomer ;
+    private JLabel SoraIcon = new JLabel();
+    private JPanel panelelsora ; 
      private  JComboBox comboCustomer = new JComboBox<>();
   private JPanel panel = new JPanel();
 
@@ -84,15 +89,20 @@ public class SignUpForm extends JFrame
                 //Panel
         setTitle("Sign Up");
         JPanel panel = new JPanel();
-    
+       panelelsora = new JPanel();
+    setResizable(false);
                 //Panel
                  
-
+                panelelsora.setLayout(null);
+                panelelsora.setSize(500,500);
         setLayout(null);
+        panelelsora.setBounds(0, 0, 500, 500);
         panel.setBounds(500, 0, 500, 500);
         panel.setLayout(null);
+        panelelsora.setBackground(new Color(3,147,147));
         panel.setBackground(new Color(36, 45, 67));
         add(panel);
+        add(panelelsora);
            //JFrame Properties
             
             setBackground(Color.white);
@@ -141,6 +151,15 @@ public class SignUpForm extends JFrame
         SaveButton = new JButton();
         jPasswordField1 = new JPasswordField("Enter Password");
         btnCustomer = new JButton("Sign up as a customer");
+        try {
+      
+          
+            ImageIcon iconLogo = new ImageIcon("BankIcon.png");
+            
+            SoraIcon.setIcon(iconLogo);
+        }catch(Exception k){}
+        
+        
         
 
   
@@ -183,6 +202,7 @@ public class SignUpForm extends JFrame
         jTextField7.setBounds(110,150,100,30);     
         UserNameTextField.setBounds(110,200,100,30);
         jPasswordField1.setBounds(110,240,100,30);
+        //SoraIcon.setBounds();
         
         
         jLabel1.setBounds(10,0,100,30);
@@ -201,7 +221,7 @@ public class SignUpForm extends JFrame
         jLabel5.setBounds(10,280,100,30);
         jLabel14.setBounds(10,390,100,30);
         jLabel15.setBounds(10,420,100,30);//valid phone number
-        
+        SoraIcon.setBounds(250,250,250 ,250);
         
         SaveButton.setBounds(20,400,100,30);
         ReadButton.setBounds(130, 400,130,30);
@@ -230,6 +250,7 @@ public class SignUpForm extends JFrame
        //Adding to the form 
         buttongp1.add(jRadioButton1);
         buttongp1.add(jRadioButton2);
+        panelelsora.add(SoraIcon);
         panel.add(UserNameLabel);
         panel.add(UserNameTextField);
         panel.add(PasswordLabel);
@@ -276,7 +297,7 @@ public class SignUpForm extends JFrame
        SignUpException ex=new SignUpException();
                 public void actionPerformed(ActionEvent e) {
                     Object buttonpressed = e.getSource();
-                    
+                    try{
                if(buttonpressed.equals(btnCustomer) && jComboBox1.getSelectedItem().toString() !="Customer" ){
                      JOptionPane.showMessageDialog(null,"Please Select customer first");
                      }
@@ -306,7 +327,7 @@ public class SignUpForm extends JFrame
                      }
                          
                         
-                           
+                    }catch(Exception l ){}
                     if (buttonpressed.equals(jButton1))
                     { 
                         try{
@@ -489,4 +510,5 @@ public class SignUpForm extends JFrame
 
      
     }}
+
 

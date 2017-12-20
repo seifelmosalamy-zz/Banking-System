@@ -78,13 +78,14 @@ public class BankingSystemFinal implements Serializable {
         laf.setVisible(true);
         CustomerServiceAgentForm csaf = new CustomerServiceAgentForm();
         csaf.setVisible(true);
-        SignUpForm suf = new SignUpForm();
-        suf.setVisible(true);
+        
         TransactionsForm transaction = new TransactionsForm ();
         LoginForm loginf = new LoginForm();
         loginf.setVisible(true);
         TransactionsForm tf = new TransactionsForm();
         CustomerForm cf2 =new CustomerForm();
+        SignUpForm suf = new SignUpForm();
+        suf.setVisible(true);
         //CurrencyScrabbing cs = new CurrencyScrabbing();
         Sound sound = new Sound();
         
