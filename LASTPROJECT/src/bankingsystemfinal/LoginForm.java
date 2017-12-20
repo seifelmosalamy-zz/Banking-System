@@ -258,7 +258,7 @@ public class LoginForm extends JFrame implements Serializable{
                 //JOptionPane.showMessageDialog(null, "Invalid U");
                 }  }
                 if (!flag)
-                { JOptionPane.showMessageDialog(null, "Invalid User Name ot type");
+                { JOptionPane.showMessageDialog(null, "Invalid User Name or type");
                     
                 }
                  if(buttonpressed.equals(jButton2)){
