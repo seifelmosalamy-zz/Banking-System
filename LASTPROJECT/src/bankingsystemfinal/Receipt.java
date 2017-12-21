@@ -54,7 +54,7 @@ public class Receipt extends JFrame
         @Override
         public void actionPerformed(ActionEvent e) {
             Object b = e.getSource();
-            if (b.equals(b))
+            if (b.equals(b)){}
         }
         
     }
