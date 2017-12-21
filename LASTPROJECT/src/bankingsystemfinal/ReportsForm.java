@@ -22,7 +22,6 @@ public class ReportsForm extends JFrame{
            JButton jButton1=new JButton("Ok");
            JButton jButton2=new JButton("Close");
            JLabel jLabel1=new JLabel("Choose the reports you want to see: ");
-<<<<<<< HEAD
     JCheckBox CheckBox1=new JCheckBox("Gender Report");
         JCheckBox CheckBox2=new JCheckBox("Transaction Report");
     JCheckBox CheckBox3=new JCheckBox("Products Report");
@@ -41,21 +40,7 @@ public class ReportsForm extends JFrame{
               panel.add(CheckBox5);
               panel.add(jButton1);
               panel.add(jButton2);
-=======
-            JCheckBox CheckBox1=new JCheckBox("Gender Report");
-                JCheckBox CheckBox2=new JCheckBox("Transaction Report");
-            JCheckBox CheckBox3=new JCheckBox("Products Report");
-                JCheckBox CheckBox4=new JCheckBox("Loans Report");
-                    JCheckBox CheckBox5=new JCheckBox("Employee Report");
-               add(jLabel1);
-               add(CheckBox1);
-               add(CheckBox2);
-               add(CheckBox3);
-               add(CheckBox4);
-               add(CheckBox5);
-               add(jButton1);
-               add(jButton2);
->>>>>>> 34da4b40a6252691a6e469b76b51102d107b6a32
+            
 
                setVisible(true);
 

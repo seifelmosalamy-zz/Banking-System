@@ -5,19 +5,22 @@
  */
 package bankingsystemfinal;
 
+import static bankingsystemfinal.BankingSystemFinal.CustomerList;
 import static bankingsystemfinal.BankingSystemFinal.a;
 import java.util.ArrayList;
 import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JTextField;
 import static bankingsystemfinal.BankingSystemFinal.labelbounds;
-import static bankingsystemfinal.BankingSystemFinal.CustomerList;
 import static bankingsystemfinal.BankingSystemFinal.textfieldbounds;
 import static bankingsystemfinal.BankingSystemFinal.x;
 import java.awt.Color;
 import java.awt.FlowLayout;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.io.FileOutputStream;
+import java.io.IOException;
+import java.io.ObjectOutputStream;
 import javax.swing.JLabel;
 import javax.swing.JOptionPane;
 import javax.swing.JPanel;
@@ -34,7 +37,8 @@ public class TransactionsForm extends JFrame
             private JButton TranseferToOwnAccountSameCurrency ;
             private JButton TranseferToOwnAccountCrossCurrency ;
             private JFrame jf ;
-            private JTextField text1; 
+            private JTextField text1;
+            private JTextField text3; 
             private JTextField text2 ; 
             private JLabel lbl2 ; 
             private JButton Transefer ; 
@@ -58,6 +62,7 @@ public class TransactionsForm extends JFrame
          TranseferToOwnAccountCrossCurrency = new  JButton ("Transfer to own account cross currency");
          text1 = new JTextField("Enter user here");
          Transefer = new JButton("Transefer");
+          text3 = new JTextField("Enter the amount");
          Transefer.setBounds(labelbounds);
          Transefer.addActionListener(new ButtonWatcher());
             text2 = new JTextField("Enter second user here");
@@ -87,28 +92,75 @@ public class TransactionsForm extends JFrame
           Object ButtonPressed =  ae.getSource();
           if(ButtonPressed.equals(Transefer))
           {
-              String sourceCurrency  = "";
-              String sourceCurrency2  = "";
-           a.searchForTwoAccounts(sourceCurrency, sourceCurrency2, text1,text2);
-              
-              
-                     if(!sourceCurrency.equals(sourceCurrency2)&& !sourceCurrency.equals("") && !sourceCurrency2.equals("")){
+              String sourceAccount  = text1.getText();
+              String DestinationAccount  = text2.getText();
+            String  sourcecurrency="";
+                 String  Destinationcurrency="";
+                 int User1Amount=0;
+                 int User2Amount=0;
+                 int i=-1;
+                 int j=-1;
+                 boolean FU1 = false;
+                 boolean FU2 = false;
+ try
+                       {
+                           for (AccountInfo User : CustomerList){
+                                    i++;
+                if (User.getUserName().equals(sourceAccount)){          
+                     sourcecurrency = User.getAccountCurrencyType();
+                     User1Amount = User.getBankAmount();
+                     FU1=true;
+                }}
+                for(AccountInfo User2 : CustomerList){
+                    j++;
+                if (User2.getUserName().equals(DestinationAccount)){    
+                         Destinationcurrency = User2.getAccountCurrencyType();
+                           User2Amount = User2.getBankAmount();
+                           FU2=true;
+                    }}
+               
+                           }catch(Exception n){
+                   
+                }
+               if(!FU1 || !FU2){
+                JOptionPane.showMessageDialog(null, "Wrong User Acoount");}
+                     if(!sourcecurrency.equals(Destinationcurrency)&& !sourcecurrency.equals("") && !Destinationcurrency.equals("")){
+                         int TAmount=Integer.parseInt(text3.getText());
+                         if(TAmount >0 && TAmount <= User1Amount){
+                             if(sourcecurrency.equals("$")){
+                         User2Amount+=(TAmount*18);
+                         User1Amount-=TAmount;
+                             }
+                             else if (sourcecurrency.equals("EGP")){ User2Amount+=(TAmount/18);
+                              User1Amount-=(TAmount);
+                             }
+                         CustomerList.get(i).setBankAmount(User1Amount);
+                           CustomerList.get(j).setBankAmount(User2Amount);
+                         try{
+                         ObjectOutputStream write3= new ObjectOutputStream(new FileOutputStream("Customer.txt"));
+            write3.writeObject(CustomerList);
+            write3.close();      
+              } catch (IOException ex) {
+              JOptionPane.showMessageDialog(null, "Error in save");}
+                         
                      JOptionPane.showMessageDialog(null, "Transfer Done");
                      }
                      else{JOptionPane.showMessageDialog(null, "Cannot be Transfered or Not Found ");}
-          }
+          }}
             if(ButtonPressed.equals(TranseferToAnotherAccountCrossCurrency))
             {
                 
                     JLabel lbl1= new JLabel("Please Select a source Account");
                     lbl1.setBounds(labelbounds);
                     text1.setBounds(textfieldbounds);
+                    text3.setBounds(textfieldbounds);
                     lbl2.setBounds(labelbounds);
                     text2.setBounds(textfieldbounds);
                     jf.add(lbl1);
                     jf.add(text1);
                     jf.add(lbl2);
                     jf.add(text2);
+                     jf.add(text3);
                     jf.add(Transefer);
                     jf.setLayout(new FlowLayout());
                     
