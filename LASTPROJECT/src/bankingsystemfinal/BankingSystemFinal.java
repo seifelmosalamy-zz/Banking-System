@@ -14,15 +14,14 @@ import Staff.CustomerServiceAgentForm;
 import Staff.HrForm;
 import Staff.Manager;
 import Staff.ManagerForm;
+import Staff.Teller;
 import Staff.TellerForm;
 import java.awt.Dimension;
-
 import java.awt.Font;
 import java.awt.Graphics;
 import org.jsoup.Jsoup;
 import org.jsoup.nodes.Document;
 import org.jsoup.nodes.Element;
-
 import java.awt.Rectangle;
 import java.awt.Toolkit;
 import java.io.FileInputStream;
@@ -41,6 +40,7 @@ import org.jsoup.Jsoup;
  * @author seifelmosalamy
  */
 public class BankingSystemFinal implements Serializable {
+    public static Client c ;
     public static int ctrm =0 ,ctrf =0,ctrt=0,ctrmw=0,ctrfw=0,ctrtw=0,ctrtt=0,ctrfc=0,ctrmc=0,ctrtc=0;
     public static ArrayList<JLabel>arraylistoflabels = new ArrayList<JLabel>();
     public static Font font = new Font("Gadugi", Font.BOLD, 12);
@@ -94,8 +94,7 @@ public class BankingSystemFinal implements Serializable {
         Sound sound = new Sound();
         
         //Making server Listining
-       
-        
+        Receipt r= new Receipt();
         
         //Networking 
        

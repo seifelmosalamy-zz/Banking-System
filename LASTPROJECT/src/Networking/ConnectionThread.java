@@ -1,14 +1,10 @@
-package Networking;
-
-
-
 /*
  * To change this license header, choose License Headers in Project Properties.
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
 
-
+package Networking;
 
 import java.io.BufferedReader;
 import java.io.IOException;
@@ -41,7 +37,11 @@ public class ConnectionThread implements Runnable{
         os=s.getOutputStream();
     }
     
-
+   
+//    public String getcontentOfLabel()
+//    {
+//        return this.Message.getText();
+//    }
     public void run() {
            fromclient=new BufferedReader(new InputStreamReader(is));
            toclient=new PrintWriter(os,true);
@@ -49,9 +49,11 @@ public class ConnectionThread implements Runnable{
         {
                try {
                    String NewMessage=fromclient.readLine();
-      
-                   Message.setText(Message.getText() +"<br>"+NewMessage);
                    
+                   //System.out.println(ch9nw.Server.allMessage.getText());
+                   //Message.setText(ch9nw.Server.allMessage.getText() +"<br>"+NewMessage);
+                   Message.setText(Message.getText() +"<br>"+NewMessage);
+                   //System.out.println(Message);
                    Thread.sleep(100);
                } catch (IOException ex) {
                    Logger.getLogger(ConnectionThread.class.getName()).log(Level.SEVERE, null, ex);

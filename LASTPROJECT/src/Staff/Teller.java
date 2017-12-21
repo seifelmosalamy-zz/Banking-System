@@ -1,6 +1,7 @@
 package Staff;
 
 import Networking.Client;
+import static bankingsystemfinal.BankingSystemFinal.c;
 import bankingsystemfinal.Interfaces.ITeller;
 import java.io.IOException;
 import java.io.Serializable;
@@ -12,15 +13,18 @@ public class Teller extends Workers implements ITeller ,  Serializable{
 
     public Teller() {
         
-        try {
-            Client cl=new Client("Teller");
-            cl.setVisible(true);
-            cl.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        } catch (IOException ex) {
-            Logger.getLogger(Teller.class.getName()).log(Level.SEVERE, null, ex);
-        }
+       
     }
 
+    public void BeingATellerClient()
+    {
+        try{
+        c= new Client("Teller");
+        c.setVisible(true);
+
+    }catch(Exception e ){}
+        
+    }
     private String EmployeeField;
     
     public void Salary()

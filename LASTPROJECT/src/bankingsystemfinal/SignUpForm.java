@@ -47,6 +47,7 @@ import javax.swing.*;
  */
 public class SignUpForm extends JFrame   
 {
+        private JButton loginButton ;
    private JTextField UserNameTextField;
     private JLabel UserNameLabel ; 
     private JButton jButton1;
@@ -80,8 +81,8 @@ public class SignUpForm extends JFrame
     private JButton btnCustomer ;
     private JLabel SoraIcon = new JLabel();
     private JPanel panelelsora ; 
-     private  JComboBox comboCustomer = new JComboBox<>();
-  private JPanel panel = new JPanel();
+    private  JComboBox comboCustomer = new JComboBox<>();
+    private JPanel panel = new JPanel();
 
 
         public SignUpForm()  {
@@ -89,8 +90,8 @@ public class SignUpForm extends JFrame
                 //Panel
         setTitle("Sign Up");
         JPanel panel = new JPanel();
-       panelelsora = new JPanel();
-    setResizable(false);
+              panelelsora = new JPanel();
+              setResizable(false);
                 //Panel
                  
                 panelelsora.setLayout(null);
@@ -151,6 +152,7 @@ public class SignUpForm extends JFrame
         SaveButton = new JButton();
         jPasswordField1 = new JPasswordField("Enter Password");
         btnCustomer = new JButton("Sign up as a customer");
+        loginButton = new JButton ("Login");
         try {
       
           
@@ -164,7 +166,7 @@ public class SignUpForm extends JFrame
 
   
             //Listners 
-            
+            loginButton.addActionListener(new ButtonWatcher());
          jButton1.addActionListener(new ButtonWatcher());
          jButton2.addActionListener(new ButtonWatcher());
          SaveButton.addActionListener(new ButtonWatcher());
@@ -235,6 +237,7 @@ public class SignUpForm extends JFrame
         jRadioButton2.setBounds(350,350,100,30);
         jRadioButton1.setText("Male");
         jRadioButton2.setText("Female");
+        loginButton.setBounds(40,400,100,30);
        
         
         //Colors
@@ -278,7 +281,8 @@ public class SignUpForm extends JFrame
         panel.add(jRadioButton1);
         panel.add(jRadioButton2);
         panel.add(btnCustomer);
-      
+        panelelsora.add(loginButton);
+       // loginButton.setForeground(Color.white);
         
 
          
@@ -458,6 +462,7 @@ public class SignUpForm extends JFrame
                 {
                     String type =jComboBox1.getSelectedItem().toString();
                     ArrayList<AccountInfo> choosen= new ArrayList<AccountInfo>(3);                  
+                  
                     if(type.equals("CustomerAgent"))
                         choosen=CustomerAgentList;
                     else if(type.equals("Teller"))

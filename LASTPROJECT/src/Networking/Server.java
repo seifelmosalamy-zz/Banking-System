@@ -1,14 +1,10 @@
-package Networking;
-
-
-
 /*
  * To change this license header, choose License Headers in Project Properties.
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
 
-
+package Networking;
 
 import java.awt.BorderLayout;
 import java.awt.Dimension;
@@ -26,7 +22,6 @@ import java.util.logging.Logger;
 import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
-import javax.swing.JOptionPane;
 import javax.swing.JTextField;
 
 /**
@@ -44,7 +39,7 @@ public class Server extends JFrame implements Runnable{
     public Server() throws IOException
     {
         setSize(new Dimension (600,600));
-        setTitle("Server");
+        setTitle("Manager");
         Mysocket=new ServerSocket(6000);
         setLayout(null);
         allMessage=new JLabel("<html>All messages here");
@@ -71,7 +66,7 @@ public class Server extends JFrame implements Runnable{
         Thread t1=new Thread(ct);
         t1.start();
         Thread.sleep(1000);
-         //   System.out.println("Waiting for another client");
+            
         }
         }
         catch (InterruptedException e)
@@ -94,7 +89,7 @@ public class Server extends JFrame implements Runnable{
                 }
                 
             } catch (IOException ex) {
-                JOptionPane.showMessageDialog(null,ex);
+                
             }
         }
         
@@ -107,7 +102,9 @@ public class Server extends JFrame implements Runnable{
         PrintWriter pw=new PrintWriter(os,true);
         pw.println(msg);
         }
-        
+        /*pw.close();
+        os.close();
+                */
                 
     }
 }
