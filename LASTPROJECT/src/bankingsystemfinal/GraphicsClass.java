@@ -26,10 +26,7 @@ public class GraphicsClass extends JPanel
 
     public GraphicsClass() 
     {
-                  if(ctrm < 0 )
-                  {
-                      ctrm  *= 20;
-                  }   
+              
         setSize(1000,1000);
          Thread gameThread = new Thread() {
          public void run() {

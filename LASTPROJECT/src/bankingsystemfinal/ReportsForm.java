@@ -40,7 +40,6 @@ public class ReportsForm extends JFrame{
               panel.add(CheckBox5);
               panel.add(jButton1);
               panel.add(jButton2);
-            
 
                setVisible(true);
 

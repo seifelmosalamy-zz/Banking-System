@@ -15,6 +15,8 @@ import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 import sun.font.GraphicComponent;
 
 /**
@@ -22,10 +24,12 @@ import sun.font.GraphicComponent;
  * @author seifelmosalamy
  */
 
-public class LoansApplicationForm extends JFrame implements Serializable, Runnable{
+public class LoansApplicationForm extends JFrame implements Serializable{
     public static int ScoreSheetPoints;
    private ButtonGroup buttongp1 ;
                 private     String fname;
+
+    
                 private     String lname ;
                 private     String email ;
                 private     String address ;
@@ -56,6 +60,9 @@ public class LoansApplicationForm extends JFrame implements Serializable, Runnab
 
     public void setFname(String fname) {
         this.fname = fname;
+    }
+    public String getFname() {
+        return fname;
     }
 
     public void setLname(String lname) {
@@ -106,8 +113,51 @@ public class LoansApplicationForm extends JFrame implements Serializable, Runnab
                       fname = jTextField1.getText();
                       lname = jTextField2.getText();
                       email = jTextField3.getText();
-                      address = jTextField5.getText();
+                      MobileNumber = jTextField5.getText();
+                    
+                      if(fname.equals("Enter Firstname") || fname.equals("")){
+                            jLabelValidfn.setForeground(Color.red);
+                          jLabelValidfn.setText("Not Valid");
+                        }
+                        else{
+                          jLabelValidfn.setForeground(Color.green);
+                          jLabelValidfn.setText("Valid");
+                        ob.setFname(fname);
+                        //label valid
+                        }
+                        
                       
+                    
+                 
+                 if(lname.equals("Enter your last name") || lname.equals("")){
+                     String Lerror="Enter a valid Last name";
+                        jLabelValidln.setForeground(Color.red);
+                          jLabelValidln.setText("Not Valid");
+                     }
+                 else{
+                     jLabelValidln.setForeground(Color.green);
+                          jLabelValidln.setText("Valid");
+                         ob.setLname(lname);
+                 }
+
+                 ob.setEmail(email);
+            
+                 
+            Pattern pattern = Pattern.compile("\\d{11}");
+            Matcher matcher = pattern.matcher(MobileNumber);
+
+            if (matcher.matches()) {
+                jLabelValidmo.setForeground(Color.green);
+                          jLabelValidmo.setText("Valid");
+                ob.setMobileNumber(MobileNumber);
+              //   jLabel15.setText("Valid");
+               //     jLabel15.setForeground(Color.green);
+              }
+              else {
+                jLabelValidmo.setForeground(Color.red);
+                          jLabelValidmo.setText("Not Valid");
+                 //  jLabel15.setText("Incorrect phone number");
+            }
             if(jRadioButton1.isSelected())
 
             { 
@@ -122,25 +172,32 @@ public class LoansApplicationForm extends JFrame implements Serializable, Runnab
                      
                      if(combo1.equals("El-Zamalek")){
                      ScoreSheetPoints+=5;
+                     ob.setAddress("El-Zamalek");
                      }
                      else if(combo1.equals("New Cairo")){
                      ScoreSheetPoints+=5;
+                     ob.setAddress("New Cairo");
                      }
                      else if(combo1.equals("El-Rehab")){
                      ScoreSheetPoints+=5;
+                     ob.setAddress("El-Rehab");
                      }
                      else if(combo1.equals("Madinaty")){
                      ScoreSheetPoints+=5;
+                     ob.setAddress("Madinaty");
                      }
                       else if(combo1.equals("Sheraton")){
                      ScoreSheetPoints+=4;
+                     ob.setAddress("Sheraton");
                      }       
                             
                      else if(combo1.equals("Nasr City")){
                      ScoreSheetPoints+=3;
+                     ob.setAddress("Nasr City");
                      }
                      else if(combo1.equals("Other")){
                      ScoreSheetPoints+=1;
+                     ob.setAddress("Other");
                      }
                                       
                      if( fname.equals(""))
@@ -178,40 +235,16 @@ public class LoansApplicationForm extends JFrame implements Serializable, Runnab
                      else if(combo2.equals("from 50,000 or more")){
                      ScoreSheetPoints+=5;
                      }
-                     
-                     
-                 if(ScoreSheetPoints>5){
+                   
+        
+
                 
-                        LoansApplicationList.add(ob);
-                       
-                        ob = new LoansApplicationForm();
-                        ScoreSheetPoints=0;
-                 }else if(ScoreSheetPoints<6){
-                     JOptionPane JO = new JOptionPane();
-                JO.showMessageDialog(null, "Sorry your application denied.");
-                ScoreSheetPoints=0;
-                 }
-                
-                 
-                 String ChoosenLoan =jComboBox5.getSelectedItem().toString();
-        LoanOfficerForm LOF = new LoanOfficerForm();
-        LOF.approveloans(ChoosenLoan);
-        try {
-            Thread.sleep(2);
-        } catch (InterruptedException ex) {
-            JOptionPane.showMessageDialog(null,"Error in thread");
-        }
-                 if(LOF.approve==true){
-                 JOptionPane.showMessageDialog(null,"Approved");
-                 }
-                 else if(LOF.approve==false){
-                     JOptionPane.showMessageDialog(null,"Disapproved");
-                 }
                 }    
  
      
     }
     }
+                
     private void initComp() {
         setTitle("Loans Application Form");
                 setSize(600,700);
@@ -228,6 +261,10 @@ public class LoansApplicationForm extends JFrame implements Serializable, Runnab
         jLabel8= new JLabel();
         jLabel9= new JLabel();
         jLabelValid= new JLabel();
+        jLabelValidfn= new JLabel() ;
+        jLabelValidln= new JLabel() ;
+        jLabelValidmo= new JLabel() ;
+    
         btn = new  JButton ("Check Insights");
         
         jTextField1= new JTextField();
@@ -278,6 +315,10 @@ public class LoansApplicationForm extends JFrame implements Serializable, Runnab
         jLabel6.setBounds(0,250,100,30);
         jLabel7.setBounds(0,300,100,30);
         jLabel8.setBounds(0,350,100,30);
+        
+        jLabelValidfn.setBounds(300,55,120,20);
+        jLabelValidln.setBounds(300,100,120,20);
+        jLabelValidmo.setBounds(300,305,120,20);
         
         jTextField1.setBounds(200, 55, 120, 20);
         jTextField2.setBounds(200, 100, 120, 20);
@@ -352,8 +393,8 @@ public class LoansApplicationForm extends JFrame implements Serializable, Runnab
         jPanel1.add(jTextField1);
         jPanel1.add(jTextField2);
         jPanel1.add(jTextField3);
-        jPanel1.add(jComboBox1);
         jPanel1.add(jTextField5);
+        jPanel1.add(jComboBox1); 
         jPanel1.add(jRadioButton1);
         jPanel1.add(jRadioButton2);
         jPanel1.add(jLabel8);
@@ -362,6 +403,9 @@ public class LoansApplicationForm extends JFrame implements Serializable, Runnab
         jPanel1.add(jLabelValid);
         jPanel1.add(jComboBox2);
         jPanel1.add(jComboBox5);
+        jPanel1.add(jLabelValidfn);
+        jPanel1.add(jLabelValidln);
+        jPanel1.add(jLabelValidmo);
     }
     
     private JPanel jPanel1;
@@ -375,6 +419,10 @@ public class LoansApplicationForm extends JFrame implements Serializable, Runnab
     private JLabel jLabel8;
     private JLabel jLabel9;
     private JLabel jLabelValid;
+    private JLabel jLabelValidfn;
+    private JLabel jLabelValidln;
+    private JLabel jLabelValidmo;
+    
     private JTextField jTextField1;
     private JTextField jTextField2;
     private JTextField jTextField3;
@@ -387,9 +435,4 @@ public class LoansApplicationForm extends JFrame implements Serializable, Runnab
     private JRadioButton jRadioButton2;
     private JButton jButton1;
     
-    
-    public void run() {
-          
-        
-    }
 }

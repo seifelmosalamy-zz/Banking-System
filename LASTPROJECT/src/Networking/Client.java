@@ -1,15 +1,12 @@
-package Networking;
-
-
-
 /*
  * To change this license header, choose License Headers in Project Properties.
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
 
+package Networking;
 
-
+import Staff.TellerForm;
 import java.awt.Color;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
@@ -25,7 +22,6 @@ import java.util.logging.Logger;
 import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
-import javax.swing.JOptionPane;
 import javax.swing.JTextField;
 
 /**
@@ -43,7 +39,7 @@ public class Client extends JFrame{
     {
         this.clientName=Name;
         setSize(300,600);
-        setTitle("Client V 1.0" + Name);
+        setTitle(Name);
         recivedMsg=new JLabel("<html>Recived Message<br>");
         setLayout(null);
         recivedMsg.setBounds(20,20, 200,250);
@@ -92,11 +88,19 @@ public class Client extends JFrame{
                     if (Message!=null)
                     {
                     recivedMsg.setText(recivedMsg.getText()+"<br>"+Message);
-                        JOptionPane.showMessageDialog(null, "Server says "); 
+                   if(Message.contains("Deposit"))
+                   {
+                       TellerForm f = new TellerForm();
+                       f.setVisible(true);
+                       
+                   }
+
+                  
+                    
                     
                     }
                 } catch (IOException ex) {
-                   JOptionPane.showMessageDialog(null, ex); 
+                    System.out.println(ex);
                 }
                 
                 try {

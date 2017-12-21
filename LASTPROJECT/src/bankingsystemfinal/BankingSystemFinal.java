@@ -7,19 +7,21 @@ package bankingsystemfinal;
 
 
 
+import Networking.Client;
+import Networking.Server;
 import Staff.CustomerForm;
 import Staff.CustomerServiceAgentForm;
 import Staff.HrForm;
+import Staff.Manager;
 import Staff.ManagerForm;
+import Staff.Teller;
 import Staff.TellerForm;
 import java.awt.Dimension;
-
 import java.awt.Font;
 import java.awt.Graphics;
 import org.jsoup.Jsoup;
 import org.jsoup.nodes.Document;
 import org.jsoup.nodes.Element;
-
 import java.awt.Rectangle;
 import java.awt.Toolkit;
 import java.io.FileInputStream;
@@ -38,6 +40,7 @@ import org.jsoup.Jsoup;
  * @author seifelmosalamy
  */
 public class BankingSystemFinal implements Serializable {
+    public static Client c ;
     public static int ctrm =0 ,ctrf =0,ctrt=0,ctrmw=0,ctrfw=0,ctrtw=0,ctrtt=0,ctrfc=0,ctrmc=0,ctrtc=0;
     public static ArrayList<JLabel>arraylistoflabels = new ArrayList<JLabel>();
     public static Font font = new Font("Gadugi", Font.BOLD, 12);
@@ -61,15 +64,15 @@ public class BankingSystemFinal implements Serializable {
     //ReadFile R= new ReadFile();R.ReadFromFile(); to read from file 
 
        ReadFromFile rff= new ReadFromFile();
-
+        Manager m = new Manager();
         SmartWalletForm smf = new SmartWalletForm();
         smf.setVisible(true);
         ReportsForm rf = new ReportsForm();
         rf.setVisible(true);
         StaffForm sf = new StaffForm();
         sf.setVisible(true);
-        ManagerForm m = new ManagerForm();
-        m.setVisible(true);
+        
+       
         HrForm hr = new HrForm();
         hr.setVisible(true);
         TellerForm tl = new TellerForm();
@@ -91,17 +94,10 @@ public class BankingSystemFinal implements Serializable {
         Sound sound = new Sound();
         
         //Making server Listining
-        /* Server s=new Server();
-        s.setVisible(true);
-        s.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        Thread t=new Thread(s);
-        t.start();*/
-        
+        Receipt r= new Receipt();
         
         //Networking 
-        /*  Client cl=new Client("Ahmed");
-        cl.setVisible(true);
-        cl.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);*/
+       
       
         //sound.play();
         

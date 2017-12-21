@@ -4,3 +4,7 @@
 *.class
 *.xml
 *.class
+*.class
+.DS_Store
+*.class
+*.class

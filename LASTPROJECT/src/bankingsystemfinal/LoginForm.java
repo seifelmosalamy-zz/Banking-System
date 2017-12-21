@@ -4,6 +4,7 @@ import Staff.CustomerForm;
 import Staff.CustomerServiceAgentForm;
 import Staff.LoanOfficerForm;
 import Staff.ManagerForm;
+import Staff.Teller;
 import Staff.TellerForm;
 import bankingsystemfinal.AccountInfo;
 import static bankingsystemfinal.BankingSystemFinal.CustomerAgentList;
@@ -210,6 +211,8 @@ public class LoginForm extends JFrame implements Serializable{
                       setVisible(false);}
                     else if(type.equals("Teller")){
                         TellerForm Tf = new TellerForm();
+                       Teller t = new Teller();
+                       t.BeingATellerClient();
      
                   Tf.setVisible(true);
                       setVisible(false);}
